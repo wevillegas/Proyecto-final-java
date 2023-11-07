@@ -4,6 +4,8 @@
  */
 package programacion2.automovil.igu;
 
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 import programacion2.automovil.logica.Controladora;
 
 /**
@@ -239,6 +241,21 @@ public class AltaAutomovil extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPuertasActionPerformed
 
+    
+    public void mostrarMensaje (String mensaje, String tipo, String titulo) {
+        JOptionPane optionPane = new JOptionPane(mensaje);
+        if(tipo.equals("Info")){
+            optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+        }
+        else if (tipo.equals("Error")) {
+            optionPane.setMessageType(JOptionPane.ERROR_MESSAGE);
+        }
+        JDialog dialog = optionPane.createDialog(titulo);
+        dialog.setAlwaysOnTop(true);
+        dialog.setVisible(true);
+    }
+    
+    
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
         String modelo = txtModelo.getText();
         String marca = txtMarca.getText();
@@ -246,6 +263,8 @@ public class AltaAutomovil extends javax.swing.JFrame {
         String color = txtColor.getText();
         String patente = txtPatente.getText();
         int cantPuertas = Integer.parseInt(txtPuertas.getText());
+        mostrarMensaje ("Vehiculo añadido correctamente", "Info", "Creacion exitosa");
+        this.dispose();
         
         control.agregarAutomovil(modelo, marca, motor, color, patente, cantPuertas);
     }//GEN-LAST:event_btnAgregarActionPerformed

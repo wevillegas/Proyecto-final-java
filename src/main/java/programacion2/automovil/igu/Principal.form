@@ -43,8 +43,10 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="btnSalir" min="-2" pref="256" max="-2" attributes="0"/>
                       <Component id="btnAltaAuto" min="-2" pref="256" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnConsulta" alignment="0" min="-2" pref="256" max="-2" attributes="0"/>
+                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                          <Component id="btnConsulta" alignment="0" min="-2" pref="256" max="-2" attributes="0"/>
+                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace pref="161" max="32767" attributes="0"/>
               </Group>

@@ -70,8 +70,9 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAltaAuto, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1)
-                    .addComponent(btnConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(btnConsulta, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel1)))
                 .addContainerGap(161, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -106,16 +107,18 @@ public class Principal extends javax.swing.JFrame {
         ConsultaAutomovil consu = new ConsultaAutomovil();
         consu.setVisible(true);
         consu.setLocationRelativeTo(null);
+        consu.setDefaultCloseOperation(ConsultaAutomovil.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_btnConsultaActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
-        // TODO add your handling code here:
+         System.exit(0);
     }//GEN-LAST:event_btnSalirActionPerformed
 
     private void btnAltaAutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAltaAutoActionPerformed
         AltaAutomovil alta = new AltaAutomovil();
         alta.setVisible(true);
         alta.setLocationRelativeTo(null);
+        alta.setDefaultCloseOperation(AltaAutomovil.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_btnAltaAutoActionPerformed
 
 

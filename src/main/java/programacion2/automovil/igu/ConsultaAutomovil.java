@@ -147,6 +147,7 @@ public class ConsultaAutomovil extends javax.swing.JFrame {
                 ModifAuto modif = new ModifAuto(idAuto);
                 modif.setVisible(true);
                 modif.setLocationRelativeTo(null);
+                modif.setDefaultCloseOperation(ModifAuto.DISPOSE_ON_CLOSE);
                 
                 this.dispose();
                 
