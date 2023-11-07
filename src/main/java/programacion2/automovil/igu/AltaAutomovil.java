@@ -110,6 +110,11 @@ public class AltaAutomovil extends javax.swing.JFrame {
                 txtPuertasActionPerformed(evt);
             }
         });
+        txtPuertas.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPuertasKeyTyped(evt);
+            }
+        });
 
         btnLimpiar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnLimpiar.setText("Limpiar");
@@ -238,7 +243,7 @@ public class AltaAutomovil extends javax.swing.JFrame {
     }//GEN-LAST:event_txtPatenteActionPerformed
 
     private void txtPuertasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPuertasActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_txtPuertasActionPerformed
 
     
@@ -277,6 +282,11 @@ public class AltaAutomovil extends javax.swing.JFrame {
         txtPatente.setText("");
         txtPuertas.setText("");
     }//GEN-LAST:event_btnLimpiarActionPerformed
+
+    private void txtPuertasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPuertasKeyTyped
+        char c = evt.getKeyChar();
+        if(c < '0' || c > '9') evt.consume();
+    }//GEN-LAST:event_txtPuertasKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
